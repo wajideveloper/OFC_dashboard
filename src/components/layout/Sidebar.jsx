@@ -20,7 +20,7 @@ import {
 } from '@mantine/core';
 import { Dropzone } from '@mantine/dropzone';
 import { Filter, X, Wand2, MapPin } from 'lucide-react';
-import { IconUpload } from '@tabler/icons-react';
+import { TbUpload } from "react-icons/tb";
 import { useData } from '../../context/DataContext';
 import { useMap } from '../../context/MapContext';
 import * as toGeoJSON from '@tmcw/togeojson';
@@ -236,20 +236,20 @@ export default function Sidebar() {
         >
           <Group justify="center" gap="xl" mih={100} style={{ pointerEvents: 'none' }}>
             <Dropzone.Accept>
-              <IconUpload size={32} color="#339af0" />
+              <TbUpload size={32} color="#339af0" />
               <Text size="lg" c="blue" inline>
                 Drop files here
               </Text>
             </Dropzone.Accept>
             <Dropzone.Reject>
-              <IconUpload size={32} color="#ff6b6b" />
+              <TbUpload size={32} color="#ff6b6b" />
               <Text size="lg" c="red" inline>
                 File type not accepted
               </Text>
             </Dropzone.Reject>
             <Dropzone.Idle>
               <Stack align="center" gap="xs">
-                <IconUpload size={32} color="#868e96" />
+                <TbUpload size={32} color="#868e96" />
                 <Text size="lg" c="dimmed" inline>
                   Drag KML, KMZ, CSV, or Shapefile (.shp, .shx, .dbf) here
                 </Text>

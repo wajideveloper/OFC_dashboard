@@ -16,7 +16,6 @@
     "@mantine/hooks": "^7.5.3",
     "@mantine/notifications": "^7.5.3",
     "@mapbox/search-js-react": "^1.0.0",
-    "@tabler/icons-react": "^3.31.0",
     "@tailwindcss/postcss": "^4.1.6",
     "@tmcw/togeojson": "^7.1.1",
     "@types/mapbox-gl": "^3.4.1",
