@@ -5,9 +5,10 @@ import { useMap } from '../../context//MapContext';
 import { useData } from '../../context/DataContext';
 import MapPopup from './MapPopup';
 import MapLegend from './MapLegend';
+import MapDrawTool from './MapDrawTool';
 
 export default function MapView() {
-  const mapContainerRef = useRef(null);
+  const mapContainerRef = useRef(null); // this is use to tell mapbox gl where to create the map
   const { initializeMap, map, isMapLoaded, zoomIn, zoomOut, resetView } = useMap();
   const { filteredData } = useData();
 
@@ -49,7 +50,9 @@ export default function MapView() {
           <Loader size="lg" />
         </Box>
       )}
+      
       <MapPopup />
+      
       <Paper
         shadow="sm"
         p="xs"
@@ -80,6 +83,9 @@ export default function MapView() {
       </Paper>
       <Box pos="absolute" bottom="20px" left="20px">
         <MapLegend />
+      </Box>
+      <Box pos="absolute" top="20px" left="20px">
+        {map && isMapLoaded && <MapDrawTool map={map} />}
       </Box>
     </Box>
   );
